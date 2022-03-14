@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical|end">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_share"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_more_horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/iv_profile"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="30dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img"
+                            app:shapeAppearanceOverlay="@style/circle" />
+
+                        <TextView
+                            android:id="@+id/tv_profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/ogabekdev"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_profile_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/ogabekdev_username"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_profile_subscriber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/_7m_followers_13_following"
+                            android:textAllCaps="false"
+                            android:textColor="#E6000000"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_search_offline"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="@drawable/et_background"
+                            android:drawableStart="@drawable/ic_search_et"
+                            android:drawablePadding="10dp"
+                            android:hint="@string/search_your_saved_photos"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:maxLength="16"
+                            android:padding="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_offline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Pinterest</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="search_for_ideas">Search for ideas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">Hi there, I am a Android programmer, Founder of Full Level Group and Co-Founder of WAIRER inc  Instagram: instagram.com/OgabekDev  Facebook: facebook.com/OgabekDev  Twitter: twitter.com/OgabekDev  Others: myurls.co/OgabekDev  Programmer: @Ogabek_Dev</string>
+    <string name="view">View</string>
+    <string name="save">Save</string>
+    <string name="social">Social</string>
+    <string name="more_like_this">More like this</string>
+    <string name="search">Search</string>
+    <string name="open">Open</string>
+    <string name="unsplash_ogabekdev">© Unsplash | OgabekDev</string>
+    <string name="ogabekdev">OgabekDev</string>
+    <string name="ogabekdev_username">\@ogabekdev</string>
+    <string name="_7m_followers_13_following">7M Followers • 13 Following</string>
+    <string name="search_your_saved_photos">Search your saved photos</string>
+</resources>

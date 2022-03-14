@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".fragment.ImageDetailsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_img_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="45dp"
+                    android:background="#0D000000"
+                    android:gravity="center_vertical|end">
+
+                    <ImageView
+                        android:id="@+id/iv_more_details"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_more_horizontal"
+                        app:tint="@color/white"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/picture_info_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:gravity="center_vertical|top">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_profile_image"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img"
+                        app:shapeAppearanceOverlay="@style/circle"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_profile_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OgabekDev"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textAllCaps="false"/>
+
+                        <TextView
+                            android:id="@+id/tv_profile_bio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about"
+                            android:textStyle="normal"
+                            android:textSize="14sp"
+                            android:textAllCaps="false"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_button"
+                        android:backgroundTint="#1A000000"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="5dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:text="@string/open"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15sp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_image_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OgabekDev"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"/>
+
+                    <TextView
+                        android:id="@+id/tv_image_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/anim_download"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:scaleX="1.3"
+                        android:scaleY="1.3"
+                        app:lottie_fileName="download.json"
+                        app:lottie_autoPlay="false"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#1A000000"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="5dp"
+                            android:textStyle="normal"
+                            android:textColor="@color/black"
+                            android:text="@string/view"/>
+
+                        <Button
+                            android:id="@+id/btn_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_button"
+                            android:backgroundTint="#E6F44336"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:layout_marginStart="5dp"
+                            android:textStyle="normal"
+                            android:textColor="@color/white"
+                            android:text="@string/save"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_image_share"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_share"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/rounded_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/social"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"/>
+
+                <LinearLayout
+                    android:id="@+id/instagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_instagram"/>
+
+                    <TextView
+                        android:id="@+id/tv_instagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="none"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.4dp"
+                    android:background="#90000000"/>
+
+                <LinearLayout
+                    android:id="@+id/twitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_twitter" />
+
+                    <TextView
+                        android:id="@+id/tv_twitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="none"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.4dp"
+                    android:background="#90000000"/>
+
+                <LinearLayout
+                    android:id="@+id/portfolio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/portfolio" />
+
+                    <TextView
+                        android:id="@+id/tv_portfolio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="none"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/rounded_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unsplash_ogabekdev"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/iv_back_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back"/>
+
+</FrameLayout>
