@@ -1,9 +1,6 @@
 package dev.ogabek.pinterest.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import dev.ogabek.pinterest.model.ImageOffline
 
 @Dao
@@ -15,7 +12,10 @@ interface ImageDao {
     @Query("SELECT * from image_list")
     fun getNotes(): List<ImageOffline>
 
-    @Query("delete from image_list")
+    @Query("DELETE from image_list")
     fun clearDataBase()
+
+    @Delete
+    fun deleteFromDatabase(image: ImageOffline)
 
 }

@@ -2,6 +2,7 @@ package dev.ogabek.pinterest.database
 
 import android.app.Application
 import android.util.Log
+import androidx.fragment.app.FragmentActivity
 import dev.ogabek.pinterest.meneger.RoomManager
 import dev.ogabek.pinterest.model.ImageOffline
 
@@ -23,6 +24,10 @@ class PictureRepository(application: Application) {
 
     fun clearDataBase() {
         pictureDao.clearDataBase()
+    }
+
+    fun deleteFromDatabase(image: ImageOffline) {
+        pictureDao.deleteFromDatabase(image)
     }
 
 }

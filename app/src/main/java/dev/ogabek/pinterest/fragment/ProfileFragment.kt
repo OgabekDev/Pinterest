@@ -1,19 +1,18 @@
 package dev.ogabek.pinterest.fragment
 
-import android.app.Application
 import android.content.ContentValues
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import dev.ogabek.pinterest.R
 import dev.ogabek.pinterest.adapter.OfflineFeedAdapter
 import dev.ogabek.pinterest.database.PictureRepository
 import dev.ogabek.pinterest.model.ImageOffline
+import java.util.concurrent.Executors
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
@@ -28,7 +27,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         super.onViewCreated(view, savedInstanceState)
 
         offlineList = ArrayList()
-        adapter = OfflineFeedAdapter(requireContext(), offlineList)
+        adapter = OfflineFeedAdapter(this, offlineList)
         initViews(view)
 
     }
@@ -47,6 +46,17 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         offlineList.clear()
         offlineList.addAll(repository.getImages())
         rv_offline.adapter!!.notifyDataSetChanged()
+    }
+
+
+    fun deleteFromDatabase(imageOffline: ImageOffline) {
+        val repository = PictureRepository(requireActivity().application)
+        val executor = Executors.newSingleThreadExecutor()
+        Toast.makeText(requireContext(), "Image successfully removed from your database", Toast.LENGTH_SHORT).show()
+        executor.execute {
+            repository.deleteFromDatabase(imageOffline)
+        }
+        adapter.notifyDataSetChanged()
     }
 
 }

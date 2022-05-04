@@ -19,7 +19,6 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
-import android.view.WindowInsetsController
 import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ShareCompat
@@ -205,6 +204,8 @@ class DetailsActivity : AppCompatActivity() {
         btn_share.setOnClickListener {
             shareUrl(image.links.html)
         }
+
+
 
     }
 

@@ -19,13 +19,14 @@ import com.bumptech.glide.Glide
 import dev.ogabek.pinterest.R
 import dev.ogabek.pinterest.activity.DetailsActivity
 import dev.ogabek.pinterest.activity.ImageActivity
+import dev.ogabek.pinterest.fragment.ProfileFragment
 import dev.ogabek.pinterest.helper.Logger
 import dev.ogabek.pinterest.model.Image
 import dev.ogabek.pinterest.model.ImageOffline
 import java.io.ByteArrayOutputStream
 
 
-class OfflineFeedAdapter(val context: Context, val feeds: ArrayList<ImageOffline>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class OfflineFeedAdapter(val context: ProfileFragment, val feeds: ArrayList<ImageOffline>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_home_feed, parent, false)
 
@@ -49,9 +50,12 @@ class OfflineFeedAdapter(val context: Context, val feeds: ArrayList<ImageOffline
                 likes.text = feed.likes.toString()
                 Glide.with(context).load(feed.image).placeholder(ColorDrawable(Color.parseColor(feed.color))).into(image)
                 item.setOnClickListener {
-                    val intent = Intent(context, ImageActivity::class.java)
+                    val intent = Intent(context.requireContext(), ImageActivity::class.java)
                     intent.putExtra("picture", feed)
                     context.startActivity(intent)
+                }
+                more.setOnClickListener {
+                    context.deleteFromDatabase(feed)
                 }
             }
         }
