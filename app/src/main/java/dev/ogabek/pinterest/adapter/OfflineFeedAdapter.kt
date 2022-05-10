@@ -56,6 +56,7 @@ class OfflineFeedAdapter(val context: ProfileFragment, val feeds: ArrayList<Imag
                 }
                 more.setOnClickListener {
                     context.deleteFromDatabase(feed)
+                    context.notifyDataSetChanged()
                 }
             }
         }

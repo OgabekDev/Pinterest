@@ -19,6 +19,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ShareCompat
@@ -86,6 +87,19 @@ class DetailsActivity : AppCompatActivity() {
         image = intent.getSerializableExtra("image") as Image
         imageView = intent.getByteArrayExtra("picture") as ByteArray
         Logger.d(TAG, image.toString())
+
+        btn_save.isEnabled = checkImageForSaved(image)
+
+    }
+
+    @SuppressLint("LongLogTag")
+    private fun checkImageForSaved(image: Image): Boolean {
+        val repository = PictureRepository(application)
+        Log.d("DetailsActivity@Checking for saved Picture | $image", " ${repository.getImages()}")
+        val imagesOffline: ArrayList<ImageOffline> = ArrayList()
+        imagesOffline.addAll(repository.getImages())
+        val offline = ImageOffline(image.id, image.urls.regular, image.likes, image.color)
+        return imagesOffline.contains(offline)
     }
 
     private fun setData() {
@@ -199,6 +213,7 @@ class DetailsActivity : AppCompatActivity() {
         btn_save.setOnClickListener {
             val imageOffline = ImageOffline(image.id, image.urls.regular, image.likes, image.color)
             saveImageToDatabase(imageOffline)
+            btn_save.isEnabled = false // This avoids button to press again
         }
 
         btn_share.setOnClickListener {

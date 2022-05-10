@@ -40,7 +40,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         getImageFromDatabase()
     }
 
-    fun getImageFromDatabase() {
+    private fun getImageFromDatabase() {
         repository = PictureRepository(requireActivity().application)
         Log.d(ContentValues.TAG, "getAllNotes: ${repository.getImages()}")
         offlineList.clear()
@@ -56,6 +56,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         executor.execute {
             repository.deleteFromDatabase(imageOffline)
         }
+    }
+
+    fun notifyDataSetChanged() {
         adapter.notifyDataSetChanged()
     }
 
