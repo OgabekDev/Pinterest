@@ -12,12 +12,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60bac6f1-d0b4-4301-9e77-2468e0d0162e" name="Default Changelist" comment="Pinterest Application">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/ogabek/pinterest/activity/DetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/ogabek/pinterest/activity/DetailsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/ogabek/pinterest/adapter/OfflineFeedAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/ogabek/pinterest/adapter/OfflineFeedAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/dev/ogabek/pinterest/fragment/ProfileFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/dev/ogabek/pinterest/fragment/ProfileFragment.kt" afterDir="false" />
-    </list>
+    <list default="true" id="60bac6f1-d0b4-4301-9e77-2468e0d0162e" name="Default Changelist" comment="Pinterest Application" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651673582747</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pinterest Application">
+      <created>1652154907382</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652154907382</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
