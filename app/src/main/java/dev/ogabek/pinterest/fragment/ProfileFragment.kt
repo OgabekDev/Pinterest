@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -12,6 +13,7 @@ import dev.ogabek.pinterest.R
 import dev.ogabek.pinterest.adapter.OfflineFeedAdapter
 import dev.ogabek.pinterest.database.PictureRepository
 import dev.ogabek.pinterest.model.ImageOffline
+import java.lang.RuntimeException
 import java.util.concurrent.Executors
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
@@ -36,6 +38,15 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         rv_offline = view.findViewById(R.id.rv_offline)
         rv_offline.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         rv_offline.adapter = adapter
+
+        view.findViewById<ImageView>(R.id.iv_more).setOnClickListener {
+            Toast.makeText(
+                requireContext(),
+                "This crash for Firebase Crashlytics",
+                Toast.LENGTH_SHORT
+            ).show()
+            throw RuntimeException("For Crashlytics")
+        }
 
         getImageFromDatabase()
     }

@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Pinterest.iml" filepath="$PROJECT_DIR$/.idea/modules/Pinterest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pinterest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pinterest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pinterest.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pinterest.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pinterest.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pinterest.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Pinterest.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Pinterest.app.unitTest.iml" />
     </modules>
   </component>
 </project>

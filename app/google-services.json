@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "395183262841",
+    "project_id": "ogabekdev-pinterest",
+    "storage_bucket": "ogabekdev-pinterest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395183262841:android:9ad3031768e525d73998a8",
+        "android_client_info": {
+          "package_name": "dev.ogabek.pinterest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395183262841-fpr87624f87f5kgdjg1e2t3lc2sepk6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.ogabek.pinterest",
+            "certificate_hash": "89a962859c236f7c92319de414a6bbf74cb3b959"
+          }
+        },
+        {
+          "client_id": "395183262841-elpbl9qi6ne5fk8hfngrd273hf1t0pv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4JXmUICgRiYI_qaoYBBLqsSVTZQ-6IAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395183262841-elpbl9qi6ne5fk8hfngrd273hf1t0pv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
